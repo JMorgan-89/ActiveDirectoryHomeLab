@@ -23,8 +23,9 @@ Step 1: Create a VM for Windows Server 2019 (Assuming we already know how to cre
 <img src="https://i.imgur.com/HhhjlKw.png" height="80%" width="80%" alt="Step 1"/>
 <br />
 <br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Step 2: Install Windows Server 2019 onto the virtual box/ enviroment  <br/>
+Step 3: Configure Network Adapters and Rename PC
+<img src="https://i.imgur.com/Kap41cH.png" height="80%" width="80%" alt="Config Adapt"/>
 <br />
 <br />
 Enter the number of passes: <br/>
