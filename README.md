@@ -1,11 +1,8 @@
-# ActiveDirectoryHomeLab
-<h1>JWipe - Disk Sanitization</h1>
+<h2> Active Directory Home Lab</h2>
 
- ### [YouTube Demonstration](https://youtu.be/7eJexJVCqJo)
+<h2>Summary</h2>
+I learned a great deal from doing this lab. I enjoyed seeing how active directory and the domain controller worked together to create a network. I first created a VM and installed Windows Server 2019 and used Server Manager which offers many different tools and services to implement small and large enterprise networks together. Creating and provisioning to deprovisioning active directory accounts to administering and securing the small enterprise network. As well as configuring dhcp and dns services alike. I also created NAT/RAT so that internal network could communicate over the network/internet. I used a power shell script located on github to create a list of users to be created inside Active Directory. vs making them one by one. I proceeded to create another VM with a client to connect to the domain controller. At the login screen any user with a user name and password can login with their credentials. Here is a quick overview on how I created this small enterprise environment.
 
-<h2>Description</h2>
-Project consists of a simple PowerShell script that walks the user through "zeroing out" (wiping) any drives that are connected to the system. The utility allows you to select the target disk and choose the number of passes that are performed. The PowerShell script will configure a diskpart script file based on the user's selections and then launch Diskpart to perform the disk sanitization.
-<br />
 
 
 <h2>Languages and Utilities Used</h2>
@@ -21,7 +18,7 @@ Project consists of a simple PowerShell script that walks the user through "zero
 
 <p align="center">
 Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/66ef7ae5-bc33-4201-9f41-dfef0282e03e" height="80%" width="80%" alt="Network Topology Steps"/>
 <br />
 <br />
 Select the disk:  <br/>
