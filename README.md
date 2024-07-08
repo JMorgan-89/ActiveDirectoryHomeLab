@@ -75,8 +75,9 @@ Continue pressing Next until you can click install and when finished click close
 <br><br>Now you will see a yellow flag on the top right corner, click on it and proceed to click on “Promote this server to a domain controller”.  <br/>
 <br><img src="https://i.imgur.com/npMf1SS.png" height="80%" width="80%" alt="Promote Server"/>
 
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Now click on “Add a new forest” and name it “Joshsdomain.com” and click “Next”.
+<br><br>Set your password and click Next.
+<br><img src="https://i.imgur.com/o54KNGr.png" height="80%" width="80%" alt="Domain Controller Options"/>
 
 Observe the wiped disk:  <br/>
 <img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
