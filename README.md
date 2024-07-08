@@ -57,13 +57,18 @@ This 127.0.0.1 is a loopback address which just means it communicates back to th
 
 <img src="https://i.imgur.com/P1IQs67.png" height="80%" width="80%" alt="IPV Properties"/>
 <br />
+
+Now we have to rename the PC.
+<br><br>Inside your VM, right click start menu then click > System > click “Rename your PC”. <br/>
+<br><img src="https://i.imgur.com/T7Fmuz9.png" height="80%" width="80%" alt="Rename PC"/>
 <br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Step 5: <b>Install Active Directory Domain Services</b>
+
+<br>Open “Server Manager”.
+
+Go to > “Add roles and features” > click on “next” until you reach the following page and then select “Active Directory Domain Services” > click on “Add Features”.  <br/>
+<br><img src="https://i.imgur.com/edUAWXx.png" height="80%" width="80%" alt="ADD Features"/>
 <br />
 <br />
 Observe the wiped disk:  <br/>
