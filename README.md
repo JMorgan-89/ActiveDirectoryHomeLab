@@ -19,7 +19,8 @@ I learned a great deal from doing this lab. I enjoyed seeing how active director
 <h2> Walk-through:</h2>
 
 <p align="center">
-Step 1: Create a VM for Windows Server 2019 (Assuming we already know how to create a VM): <br/>
+Step 1: Create a VM for Windows Server 2019 (Assuming we already know how to create a VM)
+<br> <br>Open Virtual Box and to create a VM and select processor, storage and memory based on what your system can handle and select the .iso for the vm server.iso <br/>
 <img src="https://i.imgur.com/HhhjlKw.png" height="80%" width="80%" alt="Step 1"/>
 <br />
 <br />
@@ -28,12 +29,33 @@ Step 3: Configure Network Adapters and Rename PC
 <img src="https://i.imgur.com/Kap41cH.png" height="80%" width="80%" alt="Config Adapt"/>
 <br />
 <br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Right Click each network and click status > details and note down each of their ip addresses.  <br/>
+<br><img src="https://i.imgur.com/S2RIKha.png" height="80%" width="80%" alt="Review IP"/>
 <br />
 <br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+We have two IP addresses here for each individual network:
+<ol>
+<li>10.0.2.15</li>
+<li>169.254.138.229</li>
+</ol>
+Rename the network with an IP address similar to IP 1. to > “INTERNET” and rename the network with an IP address similar to IP 2. to > “INTERNAL”.
+
+<br>b) We have to assign the IP address to internal adapter now.
+
+Right click “INTERNAL” go to properties > double click on “Internet Protocol Version 4” > Click on “Use the following address”. Use the following values:
+
+IP address : 172.16.0.1
+<br>Subnet Mask: 255.255.255.0
+
+Click on “Use the following DNS server addresses”. Use the following values:
+
+Preferred DNS server: 127.0.0.1
+
+This 127.0.0.1 is a loopback address which just means it communicates back to the local system.
+
+
+<img src="https://i.imgur.com/P1IQs67.png" height="80%" width="80%" alt="IPV Properties"/>
 <br />
 <br />
 Wait for process to complete (may take some time):  <br/>
