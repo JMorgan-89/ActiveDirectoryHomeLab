@@ -71,6 +71,27 @@ Go to > “Add roles and features” > click on “next” until you reach the f
 <br><img src="https://i.imgur.com/edUAWXx.png" height="80%" width="80%" alt="ADD Features"/>
 <br />
 <br />
+Continue pressing Next until you can click install and when finished click closed.
+<br><br>Now you will see a yellow flag on the top right corner, click on it and proceed to click on “Promote this server to a domain controller”.  <br/>
+<br><img src="https://i.imgur.com/npMf1SS.png" height="80%" width="80%" alt="Promote Server"/>
+
+Observe the wiped disk:  <br/>
+<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Observe the wiped disk:  <br/>
+<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Observe the wiped disk:  <br/>
+<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Observe the wiped disk:  <br/>
+<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
+Observe the wiped disk:  <br/>
+<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+
 Observe the wiped disk:  <br/>
 <img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
