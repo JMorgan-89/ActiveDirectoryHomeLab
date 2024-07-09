@@ -1,4 +1,4 @@
-<h2> Active Directory Home Lab UNDER CONSTRUCTION </h2>
+<h2> Active Directory Home Lab </h2>
 
 <h2>Summary</h2>
 I learned a great deal from doing this lab. I enjoyed seeing how active directory and the domain controller worked together to create a network. I first created a VM and installed Windows Server 2019 and used Server Manager which offers many different tools and services to implement small and large enterprise networks together. Creating and provisioning to deprovisioning active directory accounts to administering and securing the small enterprise network. As well as configuring dhcp and dns services alike. I also created NAT/RAT so that internal network could communicate over the network/internet. I used a power shell script located on github to create a list of users to be created inside Active Directory. vs making them one by one. I proceeded to create another VM with a client to connect to the domain controller. At the login screen any user with a user name and password can login with their credentials. Here is a quick overview on how I created this small enterprise environment.
@@ -228,7 +228,7 @@ Go to Start > CMD and type the following command:
 Ipconfig to see stats of the networking configuration. Ipv4 and default gateway should already be specified.
 
 Now let’s change hostname and connect to the domain.  <br/>
-<br><img src="https://i.imgur.com/hGMgZD0.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br><img src="https://i.imgur.com/hGMgZD0.png" height="80%" width="80%" alt="Check Hostname"/>
 
 After you click OK it will prompt you to login, use the domain admin credentials you created in Step 6a and then allow it to restart now.
 
@@ -236,7 +236,7 @@ Go to back to the Domain Controller > Server Manager > Tools > DHCP > IPv4 > Sco
 
 Go to Active Directory Users and Computers > Joshsdomain.com > Computers  <br/>
 
-<br><img src="https://i.imgur.com/u3suRBQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br><img src="https://i.imgur.com/u3suRBQ.png" height="80%" width="80%" alt="Domain"/>
 
 You should be able to see your client computer.
 
@@ -245,10 +245,10 @@ Go back to your client machine/Windows 10 machine and log in with the “Other U
 For instance one of the name is “Dwayne Plumb” so at the login screen for username would be dplumb and the password would be Password1.
 
 <li>Lab purposes Password1 was set to make things easier but in real-time complex passwords are a necessity to security.</li>
-Once successful of logging in user go to cmd prompt and type whoami  <br/>
-<img src="https://i.imgur.com/6Nyzjlg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<br>Once successful of logging in user go to cmd prompt and type whoami  <br/>
+<br><img src="https://i.imgur.com/6Nyzjlg.png" height="80%" width="80%" alt="Login"/>
 
-<b>Conclusion:</b> We are now complete with our network and have created a mini-corporate environment with all the users in the PowerShell script list as users who can log in from their machine into the corporation domain and connect to the network.
+<br><b>Conclusion:</b> We are now complete with our network and have created a mini-corporate environment with all the users in the PowerShell script list as users who can log in from their machine into the corporation domain and connect to the network.
 
 It is like how a university or school lab is set up with each student having their own set of credentials and the ability to connect to the domain.  <br/>
 
