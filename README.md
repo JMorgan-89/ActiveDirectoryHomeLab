@@ -79,18 +79,57 @@ Now click on “Add a new forest” and name it “Joshsdomain.com” and click 
 <br><br>Set your password and click Next.
 <br><img src="https://i.imgur.com/o54KNGr.png" height="80%" width="80%" alt="Domain Controller Options"/>
 
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Click Next and let the VM restart.
 
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Step 6: Create Domain Admin Account
 
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Go to Start >Windows Administrative Tools > Active Directory Users and Computers
+
+Right click on mydomain.com > New > Organizational Unit. Name it “_ADMINS” and uncheck the box.
+
+  <br/>
+<img src="https://i.imgur.com/Wz5Dkf6.png" height="80%" width="80%" alt="Admins"/>
+
+Now right click _ADMINS > New > User and fill it in the parameters.
+
+Uncheck “User must change password at next logon”.
+Check “Password never expires”.
+
+Now right click your user > properties > member of > Add > type “Domain Admins” > Click “Check Names” and Apply.
+
+Step 7: <b>Re-login with Domain Admin account</b>
+
+Sign out of the account you are logged in as. On the login page click on “Other User” and use the credentials you made in the previous step.  <br/>
+<img src="https://i.imgur.com/OmK1L5U.png" height="80%" width="80%" alt="Other User Login Screen"/>
+
+Step 8: <b>Install and configure RAS/NAT</b>
+
+Now we have to install and configure RAS/NAT , go to Server Manager > Add roles and features > click next until you reach “Select server roles” and click “Remote Access”.  <br/>
+<img src="https://i.imgur.com/kcFYVZL.png" height="80%" width="80%" alt="ADD Roles and Features RAT"/>
 
 
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Click next until you reach “Select role services”, tick “Routing” and add the feature , now continue through the rest of the installation.
+
+Once its done we can close it.
+
+Now from the top right corner of Server Manager , go to Tools > Routing and Remote Access.
+
+Right click “DOMAINCONTROLLER” and click “Configure and Enable Routing and Remote Access”
+
+Select “NAT”
+
+Now click on “Use this public interface to connect to the Internet:” and select/highlight the “Internet” interface then click next and complete the configuration.
+
+NOTE: If you are unable to select this option then close all the windows and try again.
+
+Now we are done configuring the RAS/NAT and can continue to the next step.
+
+Step 8: <b>Install and Configure DHCP Server</b>
+
+In Server Manager go to “ Add roles and features”
+
+Select “DHCP Server” and continue to install.  <br/>
+<img src="https://i.imgur.com/3qJD2v0.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
 Observe the wiped disk:  <br/>
