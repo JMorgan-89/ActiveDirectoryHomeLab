@@ -188,22 +188,66 @@ Lines 15–23 will automate the process to create a new user in active directory
 Now in PowerShell using the cd command , navigate to the directory of your script and then run the script > click “run once”.
 
 Go to Active Directory Users and Computers and Under “Users” you should see all the users that the script created.  <br/>
-<img src="https://i.imgur.com/BHa1BNU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/BHa1BNU.png" height="80%" width="80%" alt="AD Users"/>
 
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Step 10: <b>Install Windows 10 Enterprise VM</b>
 
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Minimize the domain controller and go back to your original machine go to VirtualBox > New and set the following parameters:
 
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+If unspecified the continue with default values. <br/>
+<img src="https://i.imgur.com/qCLKgsl.png" height="80%" width="80%" alt="WIN 10 VM"/>
 
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Go to System > Processor.
+If you have the capacity then increase the amount of cores used.
 
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Go to Network > Adapter 1 and set the following parameters:
+
+Now we are done with configuring the settings , Double click the VM to start it.
+
+Click on the browse icon and select the Windows 10 ISO file.
+
+Highlight your Windows 10 ISO and click Choose > Start.
+
+Now continue with the Windows 10 operating system setup/installation.
+
+Select “Custom Installation”
+
+Continue the installation process by clicking next.
+
+When prompted click on “Domain join” and then create your credentials.
+
+Disable all privacy setting options and click accept.
+
+Once your operating system is done installing and you have access to your system, we need to check whether the internet is working.
+
+Go to Start > CMD and type the following command:
+
+Ipconfig to see stats of the networking configuration. Ipv4 and default gateway should already be specified.
+
+Now let’s change hostname and connect to the domain.  <br/>
+<img src="https://i.imgur.com/hGMgZD0.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+After you click OK it will prompt you to login, use the domain admin credentials you created in Step 6a and then allow it to restart now.
+
+Go to back to the Domain Controller > Server Manager > Tools > DHCP > IPv4 > Scope > Address Leases and check whether your client lease is showing up.
+
+Go to Active Directory Users and Computers > Joshsdomain.com > Computers  <br/>
+<img src="https://i.imgur.com/u3suRBQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+You should be able to see your client computer.
+
+Go back to your client machine/Windows 10 machine and log in with the “Other User” option. Use the credentials you created from the PowerShell script with default password as “Password1”.
+
+For instance one of the name is “Dwayne Plumb” so at the login screen for username would be dplumb and the password would be Password1.
+
+<li>Lab purposes Password1 was set to make things easier but in real-time complex passwords are a necessity to security.</li>
+Once successful of logging in user go to cmd prompt and type whoami  <br/>
+<img src="https://i.imgur.com/6Nyzjlg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<b>Conclusion:</b> We are now complete with our network and have created a mini-corporate environment with all the users in the PowerShell script list as users who can log in from their machine into the corporation domain and connect to the network.
+
+It is like how a university or school lab is set up with each student having their own set of credentials and the ability to connect to the domain.  <br/>
+
 </p>
 
 <!--
