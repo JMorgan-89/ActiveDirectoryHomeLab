@@ -132,6 +132,76 @@ Select “DHCP Server” and continue to install.  <br/>
 <img src="https://i.imgur.com/3qJD2v0.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
+Now after that is complete go to Tools > DHCP > Right click IPv4 > New Scope.
+
+Now copy the following parameters, leave blank or click next if not specified
+
+172.16.0.100–200 *(range of ip address to be used by clients)  <br/>
+<img src="https://i.imgur.com/VgvQuum.png" height="80%" width="80%" alt="IP Scope"/>
+
+Click Next  <br/>
+<img src="https://i.imgur.com/yyrHAQU.png" height="80%" width="80%" alt="IP Address Ramge"/>
+
+The next page will show default gateway ip address Enter “172.16.0.1”
+
+After you are done with the scope wizard, right-click your domain server > click refresh and then right click IPv4 and click refresh. Your IPv4 should turn green.  <br/>
+<img src="https://i.imgur.com/ExXHjm5.png" height="80%" width="80%" alt="Refresh"/>
+
+Step 9: <b>Enable Browsing and Download PowerShell Scripts</b>
+
+Go to Server Manager > Configure this local server > Turn “IE Enhanced Security Configuration” Off.
+
+b) Now we will download the PowerShell script, inside the domain controller (VM) go to https://github.com/joshmadakor1/AD_PS/archive/master.zip and download the file. * script is not my own but on GitHub credit: Josh Makador
+
+Extract the file then open names.txt and add your name to the top of the file.
+
+Click on Start > Windows PowerShell >Right-click Windows PowerShell ISE > More > Run as administrator.
+
+Now go to File > Open and then open the script we downloaded named “1_CREATE_USERS”
+
+Enter the following command:
+
+Set-ExecutionPolicy Unrestricted
+
+Click “Yes to all”  <br/>
+<img src="https://i.imgur.com/d84UThj.png" height="80%" width="80%" alt="PS Script"/>
+
+<b>Script Explanation:</b>
+
+All the users will use the password = “Password1” and then all names from <i>names.txt</i> will be stored in USER_FIRST_LAST_LIST using Get-content .  <br/>
+<img src="https://i.imgur.com/RasisCs.png" height="80%" width="80%" alt="Script Breakdown"/>
+
+Now we will encrypt the plaintext password using line 6 and then line 7 automates the step in creating an organizational unit and disabling “protect container from accidental deletion”.  <br/>
+<img src="https://i.imgur.com/bokTtxG.png" height="80%" width="80%" alt="Script2"/>
+
+Lines 15 to 24 is a loop which will run for each individual user in the list.  <br/>
+<img src="https://i.imgur.com/TGEozlD.png" height="80%" width="80%" alt="Script3"/>
+
+Lines 10 and 11 splits the entire name into two sections called “first” and “last”. Line 12 creates a variable named “username” and concatenates the first character of the first name with entire last name.
+
+For e.g. — the name Dwayne Plumb will become dplumb.
+
+Line 13 will print the text in between the quotations with specific colors.
+
+Lines 15–23 will automate the process to create a new user in active directory which we have done previously by using the GUI.
+
+Now in PowerShell using the cd command , navigate to the directory of your script and then run the script > click “run once”.
+
+Go to Active Directory Users and Computers and Under “Users” you should see all the users that the script created.  <br/>
+<img src="https://i.imgur.com/BHa1BNU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Observe the wiped disk:  <br/>
+<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Observe the wiped disk:  <br/>
+<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Observe the wiped disk:  <br/>
+<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Observe the wiped disk:  <br/>
+<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 Observe the wiped disk:  <br/>
 <img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
