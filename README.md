@@ -86,7 +86,7 @@ Click Next and let the VM restart.
 
 Go to Start >Windows Administrative Tools > Active Directory Users and Computers
 
-Right click on mydomain.com > New > Organizational Unit. Name it “_ADMINS” and uncheck the box.
+Right click on Joshsdomain.com > New > Organizational Unit. Name it “_ADMINS” and uncheck the box.
 
   <br/>
 <img src="https://i.imgur.com/Wz5Dkf6.png" height="80%" width="80%" alt="Admins"/>
