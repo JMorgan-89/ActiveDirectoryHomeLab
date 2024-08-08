@@ -9,7 +9,7 @@ I learned a great deal from doing this lab. I enjoyed seeing how active director
 <h2>Technology Used</h2>
 
 - <b>Virtual Box</b> 
-- <b>Windows Server 2016.iso</b>
+- <b>Windows Server 2019.iso</b>
 - <b>Windows 10 Enterprise 64 bit.iso</b>
 
 <h2>Environments Used </h2>
