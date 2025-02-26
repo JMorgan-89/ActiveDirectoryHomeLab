@@ -102,7 +102,7 @@ Now right click your user > properties > member of > Add > type “Domain Admins
 
 Sign out of the account you are logged in as. On the login page click on “Other User” and use the credentials you made in the previous step.  <br/>
 
-<br><img src="https://i.imgur.com/OmK1L5U.png" height="80%" width="80%" alt="Other User Login Screen"/>
+<br>
 
 <b>Step 7: Install and configure RAS/NAT</b>
 
